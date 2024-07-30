@@ -28,6 +28,9 @@ def fix_or_show_unused_code(unused_items: Iterable[CodeItem], args: Args) -> str
     result = []
 
     for filename, file_unused_items in filename_to_unused_items.items():
+        if _match(filename, args.ignore_files):
+            continue
+        
         file_parts = flatten_list([item.code_parts for item in file_unused_items])
 
         unused_file_parts = merge_overlaping_file_parts(file_parts)

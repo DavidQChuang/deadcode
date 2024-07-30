@@ -26,6 +26,7 @@ class Args:
     ignore_bodies_if_inherits_from: Iterable[Pathname] = ()
     ignore_if_decorated_with: Iterable[Pathname] = ()
     ignore_if_inherits_from: Iterable[Pathname] = ()
+    ignore_files: Iterable[Pathname] = ()
     ignore_names: Iterable[Pathname] = ()
     ignore_names_if_decorated_with: Iterable[Pathname] = ()
     ignore_names_if_inherits_from: Iterable[Pathname] = ()

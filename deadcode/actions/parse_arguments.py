@@ -56,6 +56,14 @@ def parse_arguments(args: Optional[List[str]]) -> Args:
         type=str,
     )
     parser.add_argument(
+        '--ignore-files',
+        help='Filenames (or path expressions), which will be analyzed but not modified.',
+        nargs='*',
+        action='append',
+        default=[],
+        type=str,
+    )
+    parser.add_argument(
         '--ignore-names',
         help=(
             'Removes provided list of names from the output. '
